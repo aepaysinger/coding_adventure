@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link href="game_boy_style.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>GameBoy</title>
+    <script>
+      function draw() {
+        const canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
+
+        //   ctx.fillStyle = "purple";
+        //   ctx.fillRect(200, 100, 400, 650);
+
+          ctx.fillStyle = "purple";
+          ctx.beginPath();
+          ctx.moveTo(200,750);
+          ctx.lineTo(200,100);
+          ctx.lineTo(600,100);
+          ctx.lineTo(600,700);
+          ctx.quadraticCurveTo(600,750,550,750);
+          ctx.lineTo(200,750);
+          ctx.fill();
+        //   ctx.stroke();
+
+
+          ctx.fillStyle = "black";
+          ctx.beginPath(); 
+          ctx.moveTo(240,410);
+          ctx.lineTo(240,140);
+          ctx.lineTo(560,140);
+          ctx.lineTo(560,350);
+          ctx.quadraticCurveTo(560,410,510,410);
+          ctx.lineTo(240,410);
+          ctx.fill();
+        //   ctx.stroke();
+
+
+          ctx.fillStyle = "blue";
+          ctx.beginPath(); 
+          ctx.moveTo(260,390);
+          ctx.lineTo(260,160);
+          ctx.lineTo(540,160);
+          ctx.lineTo(540,360);
+          ctx.quadraticCurveTo(540,390,500,390);
+          ctx.lineTo(260,390);
+          ctx.fill();
+          ctx.stroke();
+          
+
+        }
+      }
+      
+    </script>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body onload="draw();">
+    <canvas id="tutorial" width="800" height="800"></canvas>
+  </body>
+</html>
